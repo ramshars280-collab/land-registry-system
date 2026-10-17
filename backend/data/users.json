@@ -1,0 +1,102 @@
+[
+  {
+    "id": "user-admin",
+    "username": "admin",
+    "email": "admin@terrachain.gov.in",
+    "passwordHash": "$2a$12$iIecQ0GGTTjZFFD0PhZ64OmH.lMZL4opKYpk/ypQYJ3JOpjQYG346",
+    "name": "Dr. Suresh Patil (Chief Registrar General)",
+    "role": "admin",
+    "department": "Directorate General of Land Records & Cadastral Registry",
+    "walletAddress": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "isVerified": true,
+    "createdAt": "2026-10-17T09:35:45.718Z"
+  },
+  {
+    "id": "user-inspector",
+    "username": "inspector",
+    "email": "inspector@terrachain.gov.in",
+    "passwordHash": "$2a$12$v5YFZQbRlFRlu.mCLt4.iuuqXR9EFD833WirbGbIEKUl1Uf/amueC",
+    "name": "Officer Rajesh Patil",
+    "role": "inspector",
+    "department": "Dept. of Land Records & Survey, Inspectorate Division",
+    "walletAddress": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "isVerified": true,
+    "createdAt": "2026-10-17T09:35:45.994Z",
+    "updatedAt": "2026-10-17T09:51:17.994Z"
+  },
+  {
+    "id": "user-registrar",
+    "username": "registrar",
+    "email": "registrar@terrachain.gov.in",
+    "passwordHash": "$2a$12$tnev37g0B53OZ99sQ.pmCuEXUEzA.TSaK0i93VRbJ2YElkxWR0CfC",
+    "name": "Sub-Registrar Meera Deshmukh",
+    "role": "registrar",
+    "department": "MGM Municipal Sub-Registrar Office, Chh. Sambhajinagar",
+    "walletAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "isVerified": true,
+    "createdAt": "2026-10-17T09:35:46.282Z"
+  },
+  {
+    "id": "user-seller",
+    "username": "seller",
+    "email": "seller@terrachain.io",
+    "passwordHash": "$2a$12$JBVA98Muw7mhjOKx9sAfH.PxPs.JySbodYlwryK7vF1r.IDGQF92y",
+    "name": "Ananya Sharma (Property Seller)",
+    "role": "citizen",
+    "department": "Registered Citizen Property Owner (CIDCO Zone)",
+    "walletAddress": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "isVerified": true,
+    "createdAt": "2026-10-17T09:35:46.560Z"
+  },
+  {
+    "id": "user-buyer",
+    "username": "buyer",
+    "email": "buyer@terrachain.io",
+    "passwordHash": "$2a$12$AUPIWC.Sti7V0fexyj6.Z.OvcBn5qG6Jl465w0z0r4j4SjrTXL96u",
+    "name": "Vikram Malhotra (Property Buyer)",
+    "role": "citizen",
+    "department": "Certified Real Estate Investor",
+    "walletAddress": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+    "isVerified": true,
+    "createdAt": "2026-10-17T09:35:46.850Z"
+  },
+  {
+    "id": "citizen-1792231964384-e4o5v",
+    "username": "citizen_1792231964104",
+    "email": "citizen_test_1792231964091@example.com",
+    "passwordHash": "$2a$12$ak2u5QF.PXxlH1C9gJGgMu/hlRbQfwCK1cd6Xg8VE/cHllSFsAWHO",
+    "name": "Test Citizen User",
+    "role": "citizen",
+    "department": "Citizen Landholder / Real Estate Participant",
+    "walletAddress": "0x0940Eba68aC23301Af10c151Fc9F7D5269e8A21f",
+    "isVerified": true,
+    "createdAt": "2026-10-17T10:12:44.384Z",
+    "updatedAt": "2026-10-17T10:12:44.384Z"
+  },
+  {
+    "id": "citizen-1792232095439-8v751",
+    "username": "citizen_1792232095148",
+    "email": "citizen_test_1792232095134@example.com",
+    "passwordHash": "$2a$12$TSFK1cYdJJtBscGZP/RWP.z5JSE4.hgKq4SEcbZoUBmtVOhMKTKQa",
+    "name": "Test Citizen User",
+    "role": "citizen",
+    "department": "Citizen Landholder / Real Estate Participant",
+    "walletAddress": "0xd9a43C4842EC13d9cF7221597744D7e38Af29cc4",
+    "isVerified": true,
+    "createdAt": "2026-10-17T10:14:55.439Z",
+    "updatedAt": "2026-10-17T10:14:55.439Z"
+  },
+  {
+    "id": "citizen-1792233266426-5yvv9",
+    "username": "citizen_1792233266141",
+    "email": "citizen_test_1792233266101@example.com",
+    "passwordHash": "$2a$12$pxpXaJCAraNQ3r8B2Zz.FezmSWjHyRmI2pvrs29kbbAFoErfFrl7.",
+    "name": "Test Citizen User",
+    "role": "citizen",
+    "department": "Citizen Landholder / Real Estate Participant",
+    "walletAddress": "0x125282BDEcacf4d8Abdfe5307c05a5462A6CF689",
+    "isVerified": true,
+    "createdAt": "2026-10-17T10:34:26.426Z",
+    "updatedAt": "2026-10-17T10:34:26.426Z"
+  }
+]
