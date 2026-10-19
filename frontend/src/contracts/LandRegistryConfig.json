@@ -1,8 +1,8 @@
 {
-  "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
   "network": "localhost",
   "chainId": 31337,
-  "deployedAt": "2026-10-17T09:10:51.952Z",
+  "deployedAt": "2026-10-19T07:39:54.670Z",
   "abi": [
     {
       "inputs": [],

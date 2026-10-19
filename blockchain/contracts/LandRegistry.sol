@@ -109,7 +109,7 @@ contract LandRegistry is ReentrancyGuard {
 
     modifier onlyInspector() {
         if (msg.sender != admin && !isInspector[msg.sender]) {
-            revert NotAdmin();
+            revert NotInspector();
         }
         _;
     }

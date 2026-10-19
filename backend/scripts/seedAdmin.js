@@ -49,29 +49,8 @@ async function seedAdmin() {
 
   UserStore.create(adminUser);
 
-  // Also provision initial official government accounts for Inspector, Registrar, and Citizen
-  // so the system can be thoroughly audited and tested right away
+  // Also provision initial citizen account for testing if needed
   const initialAccounts = [
-    {
-      id: "officer-inspector-initial",
-      username: "inspector",
-      email: "inspector@terrachain.gov.in",
-      password: process.env.INITIAL_INSPECTOR_PASSWORD || "InspectorPass@2025#Terra",
-      name: "Officer Rajesh Patil",
-      role: "inspector",
-      department: "Dept. of Land Records & Survey, Inspectorate Division",
-      walletAddress: "0x70997970C51812dc3A010C7d01b50e0d17dc79C8", // Hardhat Account #1
-    },
-    {
-      id: "officer-registrar-initial",
-      username: "registrar",
-      email: "registrar@terrachain.gov.in",
-      password: process.env.INITIAL_REGISTRAR_PASSWORD || "RegistrarPass@2025#Terra",
-      name: "Sub-Registrar Meera Deshmukh",
-      role: "registrar",
-      department: "MGM Municipal Sub-Registrar Office, Chh. Sambhajinagar",
-      walletAddress: "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC", // Hardhat Account #2
-    },
     {
       id: "citizen-demo-initial",
       username: "citizen_ananya",

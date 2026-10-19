@@ -22,16 +22,16 @@ import {
 
 export const PORTAL_USERS = {
   inspector: {
-    id: "user-inspector",
+    id: "officer-inspector-1792349688577",
     role: "inspector",
     portalName: "Government Land Inspector Portal",
-    badgeTitle: "MGM Municipal Authority / Land Registrar",
+    badgeTitle: "MGM Municipal Authority / Land Inspector",
     name: "Officer Rajesh Patil",
     email: "inspector@terrachain.gov.in",
     password: "inspector123",
-    department: "Department of Land Revenue & Registry, Govt. of Maharashtra",
-    walletAddress: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
-    privateKey: "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+    department: "Dept. of Land Records & Cadastral Inspection",
+    walletAddress: "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    privateKey: "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
     color: "amber",
     icon: Shield,
     privileges: [
@@ -40,6 +40,26 @@ export const PORTAL_USERS = {
       "Sign and execute cryptographic title approval transactions on EVM",
       "Immutable ledger audit trail oversight (All Registered Lands)",
       "Strictly prohibited from personal property trading",
+    ],
+  },
+  registrar: {
+    id: "officer-registrar-1792350005789",
+    role: "registrar",
+    portalName: "Government Sub-Registrar Portal",
+    badgeTitle: "MGM Municipal Authority / Sub-Registrar",
+    name: "Sub-Registrar Meera",
+    email: "registrar@terrachain.gov.in",
+    password: "registrar123",
+    department: "MGM Municipal Sub-Registrar Office",
+    walletAddress: "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+    privateKey: "0xdbda1821b80551c9d65939329250298aa3472ba22feea921c0cf5d620ea67b97",
+    color: "purple",
+    icon: Shield,
+    privileges: [
+      "Access to Government Land Sub-Registrar Desk",
+      "Endorse verified cadastral deeds with cryptographic stamp",
+      "Sign and execute final Title Certification transactions on EVM",
+      "Immutable ledger audit trail oversight",
     ],
   },
   seller: {
@@ -72,8 +92,8 @@ export const PORTAL_USERS = {
     email: "buyer@terrachain.io",
     password: "buyer123",
     department: "Apex Real Estate Holdings & Retail Investor",
-    walletAddress: "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
-    privateKey: "0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a",
+    walletAddress: "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+    privateKey: "0xdbda1821b80551c9d65939329250298aa3472ba22feea921c0cf5d620ea67b97",
     color: "blue",
     icon: Coins,
     privileges: [
@@ -187,14 +207,15 @@ export default function LoginPage({ onLoginSuccess, isDarkMode = false, toggleTh
             <button
               type="button"
               onClick={toggleTheme}
+              aria-label={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
               title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-              className={`p-2 rounded-lg border text-xs font-semibold flex items-center space-x-1.5 transition-colors shadow-2xs ${
+              className={`p-2 rounded-lg border text-xs font-semibold flex items-center space-x-1.5 transition-colors shadow-2xs tc-focus-ring ${
                 isDarkMode
                   ? "bg-slate-800 hover:bg-slate-700 border-slate-700 text-amber-300"
                   : "bg-white hover:bg-slate-100 border-slate-300 text-slate-700"
               }`}
             >
-              {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              {isDarkMode ? <Sun className="h-4 w-4" aria-hidden="true" /> : <Moon className="h-4 w-4" aria-hidden="true" />}
               <span className="hidden sm:inline">{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
             </button>
           )}

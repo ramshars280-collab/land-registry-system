@@ -219,7 +219,18 @@ function getMe(req, res) {
   if (!req.user) {
     return res.status(401).json({ error: "No active session." });
   }
-  return res.json({ user: req.user });
+  const freshUser = UserStore.findById(req.user.id) || req.user;
+  return res.json({
+    user: {
+      id: freshUser.id,
+      email: freshUser.email,
+      username: freshUser.username,
+      name: freshUser.name,
+      role: freshUser.role,
+      department: freshUser.department,
+      walletAddress: freshUser.walletAddress,
+    },
+  });
 }
 
 // 5. Logout

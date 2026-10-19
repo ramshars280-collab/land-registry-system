@@ -89,7 +89,7 @@ describe("LandRegistry Production Smart Contract", function () {
     it("Should revert if non-admin attempts verification", async function () {
       await expect(
         landRegistry.connect(unauthorizedUser).verifyLand(1)
-      ).to.be.revertedWithCustomError(landRegistry, "NotAdmin");
+      ).to.be.revertedWithCustomError(landRegistry, "NotInspector");
     });
 
     it("Should revert if verifying already verified land", async function () {
@@ -103,6 +103,22 @@ describe("LandRegistry Production Smart Contract", function () {
       await expect(
         landRegistry.connect(admin).verifyLand(999)
       ).to.be.revertedWithCustomError(landRegistry, "LandNotFound");
+    });
+
+    it("Should allow designated inspector to verify land", async function () {
+      const [_, __, ___, ____, inspectorUser] = await ethers.getSigners();
+      await landRegistry.connect(admin).addInspector(inspectorUser.address);
+      await expect(landRegistry.connect(inspectorUser).verifyLand(1))
+        .to.emit(landRegistry, "LandVerified")
+        .withArgs(1n, inspectorUser.address);
+      const land = await landRegistry.getLandDetails(1);
+      expect(land.isVerified).to.be.true;
+    });
+
+    it("Should revert if attempting to certify title before land is verified (invalid lifecycle state)", async function () {
+      await expect(
+        landRegistry.connect(admin).certifyTitle(1)
+      ).to.be.revertedWithCustomError(landRegistry, "LandNotVerified");
     });
   });
 

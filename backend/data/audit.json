@@ -1,5 +1,2383 @@
 [
   {
+    "id": "audit-1792359013304-b0ij3",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:30:13.304Z"
+  },
+  {
+    "id": "audit-1792358920124-rynpo",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:28:40.124Z"
+  },
+  {
+    "id": "audit-1792358876029-zvtq9",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:27:56.029Z"
+  },
+  {
+    "id": "audit-1792358848014-4c4zt",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:27:28.014Z"
+  },
+  {
+    "id": "audit-1792358815591-6a1mg",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:26:55.591Z"
+  },
+  {
+    "id": "audit-1792358778245-v90jo",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:26:18.245Z"
+  },
+  {
+    "id": "audit-1792358668653-uekrw",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:24:28.653Z"
+  },
+  {
+    "id": "audit-1792358648567-52pvr",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:24:08.567Z"
+  },
+  {
+    "id": "audit-1792358610628-deatl",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:23:30.628Z"
+  },
+  {
+    "id": "audit-1792358585547-5inlq",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:23:05.547Z"
+  },
+  {
+    "id": "audit-1792358556679-hoir6",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:22:36.679Z"
+  },
+  {
+    "id": "audit-1792358535651-mb29v",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:22:15.651Z"
+  },
+  {
+    "id": "audit-1792358526170-78285",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:22:06.170Z"
+  },
+  {
+    "id": "audit-1792358501427-qbf29",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:21:41.427Z"
+  },
+  {
+    "id": "audit-1792358400012-j0c1r",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:20:00.012Z"
+  },
+  {
+    "id": "audit-1792358399818-t84qs",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:19:59.818Z"
+  },
+  {
+    "id": "audit-1792358399610-3giko",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:19:59.610Z"
+  },
+  {
+    "id": "audit-1792358399408-k4x7t",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:19:59.408Z"
+  },
+  {
+    "id": "audit-1792357738858-ck9ne",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:08:58.858Z"
+  },
+  {
+    "id": "audit-1792357714691-s3g0t",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:08:34.691Z"
+  },
+  {
+    "id": "audit-1792357295045-3ga72",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:01:35.045Z"
+  },
+  {
+    "id": "audit-1792357273351-05vsa",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T21:01:13.351Z"
+  },
+  {
+    "id": "audit-1792357203603-3gx4c",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T21:00:03.603Z"
+  },
+  {
+    "id": "audit-1792357189063-hixyf",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T20:59:49.063Z"
+  },
+  {
+    "id": "audit-1792356533026-qqdte",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:48:53.026Z"
+  },
+  {
+    "id": "audit-1792356509459-cv0n2",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:48:29.459Z"
+  },
+  {
+    "id": "audit-1792356504479-nne77",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:48:24.479Z"
+  },
+  {
+    "id": "audit-1792356472114-pyyje",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:47:52.114Z"
+  },
+  {
+    "id": "audit-1792356434675-dx8l3",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:47:14.675Z"
+  },
+  {
+    "id": "audit-1792356411042-4bvob",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:46:51.042Z"
+  },
+  {
+    "id": "audit-1792356351225-g0ks4",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:45:51.225Z"
+  },
+  {
+    "id": "audit-1792356316266-8kx6m",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:45:16.266Z"
+  },
+  {
+    "id": "audit-1792356287383-u9tvz",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:44:47.383Z"
+  },
+  {
+    "id": "audit-1792356260279-nm7jm",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:44:20.279Z"
+  },
+  {
+    "id": "audit-1792355976515-qsift",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:39:36.515Z"
+  },
+  {
+    "id": "audit-1792355960521-c8yfr",
+    "action": "USER_LOGOUT",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:39:20.521Z"
+  },
+  {
+    "id": "audit-1792355940510-1y42j",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:39:00.510Z"
+  },
+  {
+    "id": "audit-1792355925918-bqhcb",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:38:45.918Z"
+  },
+  {
+    "id": "audit-1792355874650-1kkkx",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:37:54.650Z"
+  },
+  {
+    "id": "audit-1792355853047-qm6vz",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:37:33.047Z"
+  },
+  {
+    "id": "audit-1792355823167-jzq44",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T20:37:03.167Z"
+  },
+  {
+    "id": "audit-1792351810213-w3nzs",
+    "action": "RATE_LIMIT_LOCKOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector@terrachain.gov.in",
+    "details": {
+      "ip": "::1",
+      "attempts": 6
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T19:30:10.213Z"
+  },
+  {
+    "id": "audit-1792351784559-7jef3",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T19:29:44.559Z"
+  },
+  {
+    "id": "audit-1792350112311-b83f9",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T19:01:52.311Z"
+  },
+  {
+    "id": "audit-1792350026988-m78gw",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T19:00:26.988Z"
+  },
+  {
+    "id": "audit-1792350005793-4y5v2",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "registrar@terrachain.gov.in",
+    "details": {
+      "role": "registrar",
+      "wallet": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T19:00:05.793Z"
+  },
+  {
+    "id": "audit-1792349688580-lp3q3",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:54:48.580Z"
+  },
+  {
+    "id": "audit-1792349591240-yzmh7",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:53:11.240Z"
+  },
+  {
+    "id": "audit-1792349377568-r0b4n",
+    "action": "RATE_LIMIT_LOCKOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector@terrachain.gov.in",
+    "details": {
+      "ip": "::1",
+      "attempts": 5
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:49:37.568Z"
+  },
+  {
+    "id": "audit-1792349336676-x7auc",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:48:56.676Z"
+  },
+  {
+    "id": "audit-1792348263221-6o4vi",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "registrar@terrachain.gov.in",
+    "details": {
+      "role": "registrar",
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:31:03.221Z"
+  },
+  {
+    "id": "audit-1792348259928-0i7si",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:30:59.928Z"
+  },
+  {
+    "id": "audit-1792348250652-cg48d",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:30:50.652Z"
+  },
+  {
+    "id": "audit-1792348233612-5wg4q",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:30:33.612Z"
+  },
+  {
+    "id": "audit-1792348014669-t4ax2",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:26:54.669Z"
+  },
+  {
+    "id": "audit-1792348012136-1zduo",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:26:52.136Z"
+  },
+  {
+    "id": "audit-1792347142525-dukoj",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:12:22.525Z"
+  },
+  {
+    "id": "audit-1792347122351-roivx",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:12:02.351Z"
+  },
+  {
+    "id": "audit-1792347019576-e2fai",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:10:19.576Z"
+  },
+  {
+    "id": "audit-1792347000059-rsbat",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:10:00.059Z"
+  },
+  {
+    "id": "audit-1792346984233-y2l2k",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:09:44.233Z"
+  },
+  {
+    "id": "audit-1792346913074-2qwac",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:08:33.074Z"
+  },
+  {
+    "id": "audit-1792346487205-v0hyk",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:01:27.205Z"
+  },
+  {
+    "id": "audit-1792346465751-86yep",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:01:05.751Z"
+  },
+  {
+    "id": "audit-1792346445749-55si1",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T18:00:45.749Z"
+  },
+  {
+    "id": "audit-1792346277807-u92vt",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T17:57:57.807Z"
+  },
+  {
+    "id": "audit-1792346241538-po5tv",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T17:57:21.538Z"
+  },
+  {
+    "id": "audit-1792346124750-8abbu",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T17:55:24.750Z"
+  },
+  {
+    "id": "audit-1792345940536-9g9xo",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:20.536Z"
+  },
+  {
+    "id": "audit-1792345940533-qmg83",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792345940320@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x558ce095E7fDB64C5E2a8CaD1D722746Cb9DCf2B"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:20.533Z"
+  },
+  {
+    "id": "audit-1792345940525-mg4ln",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792345940320@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x558ce095E7fDB64C5E2a8CaD1D722746Cb9DCf2B",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:20.525Z"
+  },
+  {
+    "id": "audit-1792345940315-n2p88",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:20.315Z"
+  },
+  {
+    "id": "audit-1792345940312-89ech",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792345940099@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0xF932E4D08f0060567f8B4c3532E816eDfC67d3B3"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:20.312Z"
+  },
+  {
+    "id": "audit-1792345940095-kh5up",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:20.095Z"
+  },
+  {
+    "id": "audit-1792345939907-atsk5",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:19.907Z"
+  },
+  {
+    "id": "audit-1792345939719-1j5im",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:19.719Z"
+  },
+  {
+    "id": "audit-1792345939529-pu2pg",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:19.529Z"
+  },
+  {
+    "id": "audit-1792345939341-pygut",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:19.341Z"
+  },
+  {
+    "id": "audit-1792345939151-sydck",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:52:19.151Z"
+  },
+  {
+    "id": "audit-1792345830258-hk2dq",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T17:50:30.258Z"
+  },
+  {
+    "id": "audit-1792345432511-94f4a",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T17:43:52.511Z"
+  },
+  {
+    "id": "audit-1792345238211-6inbx",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:38.211Z"
+  },
+  {
+    "id": "audit-1792345238208-yfndy",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792345238014@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x8E6738D2dFeD2f46879199dbd8c256E69DCCe67a"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:38.208Z"
+  },
+  {
+    "id": "audit-1792345238203-3fid6",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792345238014@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x8E6738D2dFeD2f46879199dbd8c256E69DCCe67a",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:38.203Z"
+  },
+  {
+    "id": "audit-1792345238009-g3fde",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:38.009Z"
+  },
+  {
+    "id": "audit-1792345238006-avlkh",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792345237792@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0xf7ae0600F9E9F92BaeEaF9B824a401ED845F1eCf"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:38.006Z"
+  },
+  {
+    "id": "audit-1792345237788-0abue",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:37.788Z"
+  },
+  {
+    "id": "audit-1792345237598-4fd4j",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:37.598Z"
+  },
+  {
+    "id": "audit-1792345237408-kma8e",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:37.408Z"
+  },
+  {
+    "id": "audit-1792345237218-jr3j1",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:37.218Z"
+  },
+  {
+    "id": "audit-1792345237029-ymcd8",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:37.029Z"
+  },
+  {
+    "id": "audit-1792345236838-fiy0n",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T17:40:36.838Z"
+  },
+  {
+    "id": "audit-1792315108984-jra0d",
+    "action": "USER_LOGOUT",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:18:28.985Z"
+  },
+  {
+    "id": "audit-1792314998094-lq6qd",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:16:38.094Z"
+  },
+  {
+    "id": "audit-1792314878757-b3chr",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:14:38.757Z"
+  },
+  {
+    "id": "audit-1792314727222-wfnvf",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:12:07.222Z"
+  },
+  {
+    "id": "audit-1792314699727-otgtv",
+    "action": "USER_LOGOUT",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:11:39.727Z"
+  },
+  {
+    "id": "audit-1792314591195-hrf15",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:09:51.195Z"
+  },
+  {
+    "id": "audit-1792314481986-iuh22",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:08:01.986Z"
+  },
+  {
+    "id": "audit-1792314438025-l5srg",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:07:18.025Z"
+  },
+  {
+    "id": "audit-1792314385390-qzph4",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T09:06:25.390Z"
+  },
+  {
+    "id": "audit-1792314218450-7n19j",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:38.450Z"
+  },
+  {
+    "id": "audit-1792314218446-a3n1x",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792314218125@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0xa57005dCF978975f5f03cB4539392A8c052551b7"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:38.446Z"
+  },
+  {
+    "id": "audit-1792314218417-wnur4",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792314218125@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0xa57005dCF978975f5f03cB4539392A8c052551b7",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:38.417Z"
+  },
+  {
+    "id": "audit-1792314218111-9y7t8",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:38.111Z"
+  },
+  {
+    "id": "audit-1792314218105-29t52",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792314217779@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x544dbC3E48EaeaE8dD7fDCC7E0510908286D3a06"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:38.105Z"
+  },
+  {
+    "id": "audit-1792314217769-2ky6t",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:37.769Z"
+  },
+  {
+    "id": "audit-1792314217484-5ujin",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:37.484Z"
+  },
+  {
+    "id": "audit-1792314217190-wqio9",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:37.190Z"
+  },
+  {
+    "id": "audit-1792314216904-q1oav",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:36.904Z"
+  },
+  {
+    "id": "audit-1792314216603-nl9jo",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:36.603Z"
+  },
+  {
+    "id": "audit-1792314216300-bimuw",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-18T09:03:36.300Z"
+  },
+  {
+    "id": "audit-1792312369712-ngbdq",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T08:32:49.712Z"
+  },
+  {
+    "id": "audit-1792312314704-n6lje",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-18T08:31:54.704Z"
+  },
+  {
+    "id": "audit-1792312221494-tybax",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T08:30:21.494Z"
+  },
+  {
+    "id": "audit-1792311934887-alllk",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-18T08:25:34.887Z"
+  },
+  {
+    "id": "audit-1792269638480-rl40x",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:40:38.480Z"
+  },
+  {
+    "id": "audit-1792269628973-6bd3l",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:40:28.973Z"
+  },
+  {
+    "id": "audit-1792269412513-ijiw5",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:36:52.513Z"
+  },
+  {
+    "id": "audit-1792269370982-w1s1w",
+    "action": "USER_LOGOUT",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:36:10.982Z"
+  },
+  {
+    "id": "audit-1792269243022-f3h1f",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:34:03.022Z"
+  },
+  {
+    "id": "audit-1792269219398-gt54b",
+    "action": "USER_LOGOUT",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:33:39.399Z"
+  },
+  {
+    "id": "audit-1792269129446-8tx3j",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:32:09.446Z"
+  },
+  {
+    "id": "audit-1792269102642-kezsw",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:31:42.642Z"
+  },
+  {
+    "id": "audit-1792268988157-q81cf",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:29:48.158Z"
+  },
+  {
+    "id": "audit-1792268366170-map5p",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:19:26.170Z"
+  },
+  {
+    "id": "audit-1792268362755-ntqqh",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:19:22.755Z"
+  },
+  {
+    "id": "audit-1792268307549-todox",
+    "action": "USER_LOGOUT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {},
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:18:27.549Z"
+  },
+  {
+    "id": "audit-1792268304065-12461",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:18:24.065Z"
+  },
+  {
+    "id": "audit-1792268038274-w3g9y",
+    "action": "TITLE_CERTIFIED_ON_CHAIN",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "details": {
+      "landId": 5,
+      "txHash": "0xeb721bbfde568663a0237ed8d5263626c555dc1106d8742377f5df85df19a03f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:58.274Z"
+  },
+  {
+    "id": "audit-1792268038073-abefe",
+    "action": "LAND_PURCHASED_ON_CHAIN",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+    "details": {
+      "landId": 5,
+      "priceWei": "3500000000000000000",
+      "txHash": "0xa37018e50658d503ec69336980b30f680226e0fb1f6381d7b96b96eb5ad2330e"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:58.073Z"
+  },
+  {
+    "id": "audit-1792268037835-ojd2i",
+    "action": "LAND_LISTED_ON_CHAIN",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "details": {
+      "landId": 5,
+      "priceEth": "3.5",
+      "txHash": "0xa7dbf44a73316abcb7f216a59838b5a8401865222331b3a94b4d4f944ec3162f"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:57.835Z"
+  },
+  {
+    "id": "audit-1792268037670-9l0bm",
+    "action": "LAND_VERIFIED_ON_CHAIN",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "details": {
+      "landId": 5,
+      "txHash": "0x03760106dc656e2f03d90a2a1e8c2ef10023290fef546245b21c50df79307099"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:57.670Z"
+  },
+  {
+    "id": "audit-1792268037525-pyksy",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/blockchain/land/5/verify",
+      "requiredRoles": [
+        "inspector"
+      ]
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:57.525Z"
+  },
+  {
+    "id": "audit-1792268037518-g24rg",
+    "action": "LAND_REGISTERED_ON_CHAIN",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "details": {
+      "landId": 5,
+      "txHash": "0x9de3265e0205140854f52da0c476cdc3cb5ec3d830c8d2618b51370e68d052b0",
+      "physicalAddress": "Plot #99, Integration Test Sector, Chh. Sambhajinagar",
+      "area": 5000
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:57.518Z"
+  },
+  {
+    "id": "audit-1792268037270-iovcq",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "citizen",
+      "attemptedRole": "admin"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:57.270Z"
+  },
+  {
+    "id": "audit-1792268036355-2xwkw",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:56.355Z"
+  },
+  {
+    "id": "audit-1792268035900-glqj7",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:55.900Z"
+  },
+  {
+    "id": "audit-1792268035419-3feo8",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:55.419Z"
+  },
+  {
+    "id": "audit-1792268034932-0m2k9",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:54.932Z"
+  },
+  {
+    "id": "audit-1792268034410-65ea9",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:13:54.410Z"
+  },
+  {
+    "id": "audit-1792267891544-5j5qn",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:31.544Z"
+  },
+  {
+    "id": "audit-1792267891536-24o3p",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792267891071@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0xA43dCbf40e35E2c076227D52D66989eaEE9f7B27"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:31.536Z"
+  },
+  {
+    "id": "audit-1792267891521-m87ex",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792267891071@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0xA43dCbf40e35E2c076227D52D66989eaEE9f7B27",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:31.521Z"
+  },
+  {
+    "id": "audit-1792267891047-q74ee",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:31.047Z"
+  },
+  {
+    "id": "audit-1792267891042-1ino3",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792267890519@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0xeDB7352fa5085C0862AD260B9b59bdA66832FA24"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:31.042Z"
+  },
+  {
+    "id": "audit-1792267890503-c8kj9",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:30.503Z"
+  },
+  {
+    "id": "audit-1792267890103-ayuny",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:30.103Z"
+  },
+  {
+    "id": "audit-1792267889777-gyj5w",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:29.777Z"
+  },
+  {
+    "id": "audit-1792267889448-7g2cf",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:29.448Z"
+  },
+  {
+    "id": "audit-1792267889071-0eu6z",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:29.071Z"
+  },
+  {
+    "id": "audit-1792267888712-6sm1r",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T20:11:28.712Z"
+  },
+  {
+    "id": "audit-1792267505631-tzhnp",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:05:05.631Z"
+  },
+  {
+    "id": "audit-1792267422077-rk3wt",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:03:42.077Z"
+  },
+  {
+    "id": "audit-1792267351228-w15yb",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T20:02:31.228Z"
+  },
+  {
+    "id": "audit-1792267197235-2eax9",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T19:59:57.235Z"
+  },
+  {
+    "id": "audit-1792265951922-h2xhf",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:11.922Z"
+  },
+  {
+    "id": "audit-1792265951915-9y0w1",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792265951450@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x530E2D5ea619E3ba92eBD801d80805dBF16bd16d"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:11.915Z"
+  },
+  {
+    "id": "audit-1792265951901-xg7t0",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792265951450@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x530E2D5ea619E3ba92eBD801d80805dBF16bd16d",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:11.901Z"
+  },
+  {
+    "id": "audit-1792265951435-50n2j",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:11.435Z"
+  },
+  {
+    "id": "audit-1792265951429-47p8v",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792265950916@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x0FDEa7640366d558c4A138D4a3Ba89889AfA801B"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:11.429Z"
+  },
+  {
+    "id": "audit-1792265950908-yvfev",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:10.908Z"
+  },
+  {
+    "id": "audit-1792265950586-a76in",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:10.586Z"
+  },
+  {
+    "id": "audit-1792265950273-cvjl6",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:10.273Z"
+  },
+  {
+    "id": "audit-1792265949960-prsvh",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:09.960Z"
+  },
+  {
+    "id": "audit-1792265949654-w9f29",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:09.654Z"
+  },
+  {
+    "id": "audit-1792265949351-uaxzu",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:39:09.351Z"
+  },
+  {
+    "id": "audit-1792265751272-j00uv",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T19:35:51.272Z"
+  },
+  {
+    "id": "audit-1792265703778-123vl",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T19:35:03.778Z"
+  },
+  {
+    "id": "audit-1792265614738-moc6o",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T19:33:34.739Z"
+  },
+  {
+    "id": "audit-1792265541032-6mxwg",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T19:32:21.032Z"
+  },
+  {
+    "id": "audit-1792263894342-5uh6f",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:54.342Z"
+  },
+  {
+    "id": "audit-1792263894336-wjzuf",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792263893916@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x20f2AaD5343b32A1A89204b554646ec5d040ccaD"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:54.336Z"
+  },
+  {
+    "id": "audit-1792263894323-5uyyr",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792263893916@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x20f2AaD5343b32A1A89204b554646ec5d040ccaD",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:54.324Z"
+  },
+  {
+    "id": "audit-1792263893901-b0rvq",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:53.901Z"
+  },
+  {
+    "id": "audit-1792263893894-qdq3u",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792263893493@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0xf062Ce81Df373BD5B32fae337cf99cEF5dE4A516"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:53.894Z"
+  },
+  {
+    "id": "audit-1792263893486-kmrao",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:53.486Z"
+  },
+  {
+    "id": "audit-1792263893174-jqzye",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:53.174Z"
+  },
+  {
+    "id": "audit-1792263892873-zsx0l",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:52.873Z"
+  },
+  {
+    "id": "audit-1792263892545-vwe1z",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:52.545Z"
+  },
+  {
+    "id": "audit-1792263892248-oc5xh",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:52.248Z"
+  },
+  {
+    "id": "audit-1792263891923-jp5ks",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T19:04:51.923Z"
+  },
+  {
+    "id": "audit-1792262703082-49zdy",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:03.082Z"
+  },
+  {
+    "id": "audit-1792262703073-yxp4z",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792262702734@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0xC9Ac7E216514EFf8AB496d6eA2fcf6E40573AEC0"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:03.073Z"
+  },
+  {
+    "id": "audit-1792262703051-jjm79",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792262702734@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0xC9Ac7E216514EFf8AB496d6eA2fcf6E40573AEC0",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:03.051Z"
+  },
+  {
+    "id": "audit-1792262702721-qzmrh",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:02.721Z"
+  },
+  {
+    "id": "audit-1792262702714-whx82",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792262702361@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0xE9548EB32ccc7B6525b160DDcb44EAD669B183f4"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:02.714Z"
+  },
+  {
+    "id": "audit-1792262702348-bh38o",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:02.348Z"
+  },
+  {
+    "id": "audit-1792262702051-4u32v",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:02.051Z"
+  },
+  {
+    "id": "audit-1792262701738-a696b",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:01.738Z"
+  },
+  {
+    "id": "audit-1792262701430-gaq16",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:01.430Z"
+  },
+  {
+    "id": "audit-1792262701134-z1lgi",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:01.134Z"
+  },
+  {
+    "id": "audit-1792262700832-6vccc",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:45:00.832Z"
+  },
+  {
+    "id": "audit-1792261834913-ohmfx",
+    "action": "TITLE_CERTIFIED_ON_CHAIN",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "details": {
+      "landId": 4,
+      "txHash": "0x2e4b721289a2f81f84ee39c4aff202ee81fe1c5a81b18a36781b67a5b8980b37"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:34.913Z"
+  },
+  {
+    "id": "audit-1792261834757-fozma",
+    "action": "LAND_PURCHASED_ON_CHAIN",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+    "details": {
+      "landId": 4,
+      "priceWei": "3500000000000000000",
+      "txHash": "0x6d09d617d257e4385b1a32542d3ee57b7047ca9670335eebf0d4f9e82f306de7"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:34.757Z"
+  },
+  {
+    "id": "audit-1792261834602-voa52",
+    "action": "LAND_LISTED_ON_CHAIN",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "details": {
+      "landId": 4,
+      "priceEth": "3.5",
+      "txHash": "0xfcd768579771233145a2f6f8ede1ec3289c836f711da71adebaad7e5a7f89194"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:34.602Z"
+  },
+  {
+    "id": "audit-1792261834460-n0eo9",
+    "action": "LAND_VERIFIED_ON_CHAIN",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "details": {
+      "landId": 4,
+      "txHash": "0x0d84cae5ef31e7120c5a8f6955a60db7dca71c8c4e9025e69950d54469620e98"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:34.460Z"
+  },
+  {
+    "id": "audit-1792261834288-6i37l",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/blockchain/land/4/verify",
+      "requiredRoles": [
+        "inspector"
+      ]
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:34.288Z"
+  },
+  {
+    "id": "audit-1792261834282-99sv8",
+    "action": "LAND_REGISTERED_ON_CHAIN",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "details": {
+      "landId": 4,
+      "txHash": "0x9a4ec86c1ea74dea36fcb3fdfe1736953ba2997c74196852b081ebec53d43063",
+      "physicalAddress": "Plot #99, Integration Test Sector, Chh. Sambhajinagar",
+      "area": 5000
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:34.282Z"
+  },
+  {
+    "id": "audit-1792261834051-e4ep3",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "citizen",
+      "attemptedRole": "admin"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:34.051Z"
+  },
+  {
+    "id": "audit-1792261833474-cehcq",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:33.474Z"
+  },
+  {
+    "id": "audit-1792261833181-z0w6r",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:33.181Z"
+  },
+  {
+    "id": "audit-1792261832895-6jsz4",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:32.895Z"
+  },
+  {
+    "id": "audit-1792261832601-qxvm3",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:32.601Z"
+  },
+  {
+    "id": "audit-1792261832309-ns8ka",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::1",
+    "timestamp": "2026-10-17T18:30:32.309Z"
+  },
+  {
+    "id": "audit-1792261821849-990ga",
+    "action": "USER_LOGOUT",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {},
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:21.849Z"
+  },
+  {
+    "id": "audit-1792261821846-m5uaz",
+    "action": "OFFICER_DEACTIVATED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792261821543@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x8aCE1a2C73e69449E5a9D3805A1a920066A74516"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:21.846Z"
+  },
+  {
+    "id": "audit-1792261821836-bmhxk",
+    "action": "OFFICER_PROVISIONED",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "inspector_1792261821543@terrachain.gov.in",
+    "details": {
+      "role": "inspector",
+      "wallet": "0x8aCE1a2C73e69449E5a9D3805A1a920066A74516",
+      "provisionedBy": "admin@terrachain.gov.in"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:21.836Z"
+  },
+  {
+    "id": "audit-1792261821528-3vbu0",
+    "action": "UNAUTHORIZED_ACCESS_ATTEMPT",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "requestedPath": "/api/officers",
+      "requiredRoles": [
+        "admin"
+      ]
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:21.528Z"
+  },
+  {
+    "id": "audit-1792261821522-gnh2k",
+    "action": "CITIZEN_REGISTERED",
+    "performedBy": "citizen_test_1792261821196@example.com",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x44B4b8A5B327333EceFAB0588f04E0b78AEff3Aa"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:21.522Z"
+  },
+  {
+    "id": "audit-1792261821187-dad04",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "buyer@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:21.187Z"
+  },
+  {
+    "id": "audit-1792261820899-mrs8v",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "seller@terrachain.io",
+    "targetUser": "citizen",
+    "details": {
+      "wallet": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:20.899Z"
+  },
+  {
+    "id": "audit-1792261820611-itkjh",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "registrar@terrachain.gov.in",
+    "targetUser": "registrar",
+    "details": {
+      "wallet": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:20.611Z"
+  },
+  {
+    "id": "audit-1792261820330-s7ovg",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "inspector",
+    "details": {
+      "wallet": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:20.330Z"
+  },
+  {
+    "id": "audit-1792261820046-0mq5u",
+    "action": "USER_LOGIN_SUCCESS",
+    "performedBy": "admin@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:20.046Z"
+  },
+  {
+    "id": "audit-1792261819735-7brlg",
+    "action": "ROLE_MISMATCH_LOGIN_BLOCKED",
+    "performedBy": "inspector@terrachain.gov.in",
+    "targetUser": "admin",
+    "details": {
+      "actualRole": "inspector",
+      "attemptedRole": "admin"
+    },
+    "ip": "::ffff:127.0.0.1",
+    "timestamp": "2026-10-17T18:30:19.735Z"
+  },
+  {
     "id": "audit-1792234115818-8huy2",
     "action": "USER_LOGOUT",
     "performedBy": "seller@terrachain.io",

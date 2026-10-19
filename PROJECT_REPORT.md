@@ -58,9 +58,9 @@ This is to certify that **Ramsha Siddiqui** (PRN: `202256108035`) and **Durga Ra
 
 Land registration is a foundational pillar of modern economic administration, establishing authoritative legal title over real property assets. However, conventional land records rely heavily on centralized departmental databases and physical paper registries, which remain inherently vulnerable to record tampering, fraudulent duplicate deed issuance, unauthorized modifications by compromised administrators, and bureaucratic opacity. In developing economies, land disputes account for a staggering share of all civil litigation due to unreliable chain-of-title archives.
 
-To resolve these critical vulnerabilities, this project develops **TerraChain**, an end-to-end decentralized, production-grade **Blockchain-Based Land Registry and Title Transfer System** deployed on EVM-compatible blockchain infrastructure. Rather than relying on rudimentary client-side simulations, the latest system is architected using **Solidity (v0.8.20)** smart contracts, the **Hardhat** development environment, **Pinata IPFS (InterPlanetary File System)** decentralized storage, **Ethers.js (v6)**, and a modern **React 18 (Vite + Tailwind CSS)** Web3 client.
+To resolve these critical vulnerabilities, this project develops **TerraChain (LandBlock)**, an end-to-end decentralized, production-grade **Blockchain-Based Land Registry and Title Transfer System** deployed on EVM-compatible blockchain infrastructure (Hardhat Localhost, Chain ID 31337, and Sepolia Testnet, Chain ID 11155111). Rather than relying on rudimentary client-side simulations, the latest system is architected using **Solidity (v0.8.20)** smart contracts, the **Hardhat** development environment, a dedicated **Node.js / Express** authentication and RBAC backend service, **Pinata IPFS (InterPlanetary File System)** decentralized storage with local fallback, **Ethers.js (v6)**, and a modern **React 18 (Vite + Tailwind CSS)** Web3 client.
 
-All parcel registrations, surveyor blueprints, and deed PDFs are cryptographically anchored to IPFS, storing the immutable 32-byte Content Identifier (CID) directly within the smart contract. A two-tier gatekeeper workflow requires designated **Government Land Inspectors** to physically audit deeds and verify titles on-chain before a property can enter the marketplace. Once verified, owners can list parcels, and prospective buyers execute trustless, atomic purchases governed by smart contract escrow with OpenZeppelin `ReentrancyGuard`, ensuring simultaneous ETH payment settlement, title reassignment, and automatic surplus payment refunds. The smart contract integrity is validated through an automated test suite of 21 comprehensive test cases with 100% assertions satisfied.
+All parcel registrations, surveyor blueprints, and deed PDFs are cryptographically anchored to IPFS, storing the immutable 32-byte Content Identifier (CID) directly within the smart contract. A two-tier gatekeeper workflow requires designated **Field Land Inspectors** to physically audit deeds and verify land on-chain (`verifyLand`), followed by **Government Land Registrars** issuing formal title certification (`certifyTitle`) before a property can enter the marketplace. Once certified, owners can list parcels, and prospective buyers execute trustless, atomic purchases governed by smart contract escrow with OpenZeppelin `ReentrancyGuard`, ensuring simultaneous ETH payment settlement, title reassignment with O(1) swap-and-pop array updates, and automatic surplus payment refunds. The smart contract integrity is validated through an automated test suite of 21 comprehensive test cases with 100% assertions satisfied.
 
 ---
 
@@ -127,31 +127,41 @@ A fundamental finding from existing literature is the **blockchain storage parad
 
 ## 6. Proposed Methodology
 
-TerraChain implements a modular 3-tier decentralized architecture:
+TerraChain implements a modular 4-tier decentralized architecture:
 
 ```
 +-------------------------------------------------------------------------------+
-|                       TIER 3: CLIENT & WEB3 PRESENTATION                      |
+|                       TIER 4: CLIENT & WEB3 PRESENTATION                      |
 |  React 18 + Vite + Tailwind CSS + Lucide Icons + Ethers.js v6 Context        |
-|  - Role-Based Dynamic Views (Admin / Land Inspector, Owner/Seller, Buyer)     |
+|  - 4 Role Dashboards (Admin, Field Inspector, Government Registrar, Citizen)  |
 |  - Drag-and-Drop Pinata IPFS Uploader with Progress Bar & Deed Gateway Link   |
-|  - Floating Toast Notifications for Real-Time Transaction Feedback           |
+|  - Persistent Dark / Light Theme Toggle & Real-Time Transaction Toast Banners |
 +---------------------------------------+---------------------------------------+
-                                        | (MetaMask EIP-1193 / JSON-RPC)
+                                        | (MetaMask EIP-1193 / REST API)
+                                        v
++-------------------------------------------------------------------------------+
+|                   TIER 3: BACKEND AUTHENTICATION & RBAC SERVICE               |
+|  Node.js / Express (Port 5000)                                                |
+|  - Cryptographic Nonce Challenge-Response Signature Verification              |
+|  - JWT Session Tokens, httpOnly Cookies, and Bcrypt Hashing                   |
+|  - Government Officer Lifecycle Management & Structured Audit Logs            |
++---------------------------------------+---------------------------------------+
+                                        | (JSON-RPC 2.0 / Ethers Signer)
                                         v
 +-------------------------------------------------------------------------------+
 |                      TIER 1: SMART CONTRACT EXECUTION LAYER                   |
 |  Solidity 0.8.20 (`LandRegistry.sol`) on Hardhat Node / EVM                  |
 |  - Data Structures: Struct `Land` (id, address, area, price, ipfsHash, owner)  |
-|  - Access Modifiers: `onlyAdmin` (Inspector), `onlyOwner` (Landowner)         |
-|  - Atomic Escrow: `buyLand()` with OpenZeppelin `ReentrancyGuard`              |
-|  - Gas-Optimized Custom Errors & State Change Event Emissions                 |
+|  - Access Modifiers: `onlyAdmin`, `onlyInspector`, `onlyRegistrar`, `onlyOwner`|
+|  - Two-Tier Gatekeeper: `verifyLand()` + `certifyTitle()`                     |
+|  - Atomic Escrow: `buyLand()` with OpenZeppelin `ReentrancyGuard` & Refund    |
+|  - 16 Gas-Optimized Custom Errors & O(1) Swap-and-Pop Array Cleanup           |
 +---------------------------------------+---------------------------------------+
-                                        |
-                                        v (HTTPS REST API / Content CID)
+                                        | (HTTPS REST API / Content CID)
+                                        v
 +-------------------------------------------------------------------------------+
 |                     TIER 2: DECENTRALIZED STORAGE LAYER                       |
-|  Pinata IPFS (InterPlanetary File System)                                     |
+|  Pinata IPFS (InterPlanetary File System) + Dual Storage Adapter Fallback     |
 |  - Cryptographic Content-Addressing: 32-Byte Hash (e.g., QmXoypizjW3WknFi...)  |
 |  - Off-Chain Cadastral Blueprints, Scanned Sale Deeds, and Surveyor Maps     |
 +-------------------------------------------------------------------------------+
@@ -162,21 +172,23 @@ TerraChain implements a modular 3-tier decentralized architecture:
    - Implemented in Solidity 0.8.20 and compiled via Hardhat.
    - Maintains the canonical state of all land parcels on the EVM.
    - Custom data struct `Land` tracks: `id`, `physicalAddress`, `areaSqFt`, `priceInWei`, `ipfsHash`, `currentOwner`, `isVerified`, and `isForSale`.
-   - Incorporates OpenZeppelin's `ReentrancyGuard` and follows the **Checks-Effects-Interactions** security pattern.
+   - Incorporates OpenZeppelin's `ReentrancyGuard` and follows the **Checks-Effects-Interactions** security pattern with O(1) swap-and-pop array updates.
 2. **Tier 2: Decentralized Storage Layer (Pinata IPFS)**:
-   - Eliminates bloated on-chain gas costs by offloading document storage to the InterPlanetary File System.
+   - Eliminates bloated on-chain gas costs by offloading document storage to the InterPlanetary File System with local content-addressed fallback.
    - Files are pinned using Pinata's REST API, generating an immutable, cryptographic Content Identifier (CID).
    - If any actor alters a single byte or pixel of the off-chain deed, the resulting hash completely changes, instantly exposing fraud.
-3. **Tier 3: Web3 Presentation & Integration Layer**:
+3. **Tier 3: Backend Authentication & Security Tier**:
+   - Node.js/Express service enforcing cryptographic nonce-signature verification, JWT session tokens, bcrypt password hashing, officer provisioning, and structured audit logs.
+4. **Tier 4: Web3 Presentation & Integration Layer**:
    - Built with React 18, Vite, and Tailwind CSS.
    - Employs **Ethers.js v6** to manage provider/signer connections with MetaMask (`window.ethereum`).
-   - Dynamically identifies the connected wallet address and renders tailored views for Government Inspectors, Landowners, and Buyers.
+   - Dynamically identifies the authenticated role and renders tailored views for Admin, Field Inspectors, Land Registrars, and Citizens.
 
 ---
 
 ## 7. Implementation
 
-The latest implementation is organized as a production-grade monorepo cleanly decoupling the smart contract development workspace from the Web3 client:
+The latest implementation is organized as a production-grade monorepo cleanly decoupling the smart contract development workspace, the backend authentication service, and the Web3 client:
 
 ```
 C:\LandBlock\
@@ -186,7 +198,7 @@ C:\LandBlock\
 │
 ├── blockchain\                           # Hardhat Smart Contract Workspace
 │   ├── contracts\
-│   │   └── LandRegistry.sol              # Solidity 0.8.20 smart contract
+│   │   └── LandRegistry.sol              # Solidity 0.8.20 smart contract (16 custom errors)
 │   ├── scripts\
 │   │   └── deploy.js                     # Deployment & frontend ABI synchronization script
 │   ├── test\
@@ -194,38 +206,52 @@ C:\LandBlock\
 │   ├── hardhat.config.js                 # Network settings (Localhost 31337 & Sepolia 11155111)
 │   └── package.json                      # Hardhat, OpenZeppelin & Ethers dependencies
 │
+├── backend\                              # Express & Node.js RBAC Service (Port 5000)
+│   ├── src\
+│   │   ├── controllers\                  # Auth, Officer, Storage, and Blockchain Controllers
+│   │   ├── middleware\                   # JWT Auth & Role-Based Access Control Guards
+│   │   └── data\                         # Officer registry & tamper-evident audit logs
+│   ├── server.js                         # Express application entry point
+│   ├── test\                             # Auth & RBAC integration test suite
+│   └── package.json                      # Express, JWT, Bcrypt, Ethers dependencies
+│
 └── frontend\                             # Web3 Client Workspace (React 18 + Vite)
     ├── src\
+    │   ├── pages\
+    │   │   ├── AdminDashboard.jsx        # Admin portal: officer management & audit logs
+    │   │   ├── InspectorDashboard.jsx    # Inspector portal: deed verification & site audits
+    │   │   ├── RegistrarDashboard.jsx    # Registrar portal: title certification pipeline
+    │   │   ├── CitizenDashboard.jsx      # Citizen portal: registration, marketplace & assets
+    │   │   ├── LandingPage.jsx           # Public showcase & system architecture breakdown
+    │   │   └── RoleLoginPage.jsx         # Unified role selection & wallet challenge login
     │   ├── components\
     │   │   └── DocumentUploader.jsx      # Drag-and-drop Pinata IPFS uploader with progress
     │   ├── context\
     │   │   └── Web3Context.jsx           # Global Web3 state manager & contract wrappers
-    │   ├── contracts\
-    │   │   ├── LandRegistryConfig.json   # Auto-synced contract address, chain ID & ABI
-    │   │   └── LandRegistryABI.json      # Standalone contract ABI
     │   ├── services\
+    │   │   ├── authApi.js                # Backend authentication & officer API
+    │   │   ├── landApi.js                # Smart contract & backend transaction bridge
     │   │   └── pinataService.js          # Pinata IPFS file and metadata pinning service
-    │   ├── utils\
-    │   │   ├── ethereum.js               # MetaMask connection & formatting helpers
-    │   │   └── ipfs.js                   # IPFS gateway resolver utilities
-    │   ├── App.jsx                       # Main application shell with 4 role-based tabs
+    │   ├── App.jsx                       # Main application shell with theme switching
     │   ├── main.jsx                      # React application bootstrap
-    │   └── index.css                     # Tailwind CSS directives
+    │   └── index.css                     # Tailwind CSS directives & color tokens
     ├── vite.config.js                    # Vite configuration
     └── package.json                      # React, Vite, Tailwind CSS, Lucide dependencies
 ```
 
 ### Key Smart Contract Functions (`LandRegistry.sol`):
-- `registerLand(physicalAddress, areaSqFt, priceInWei, ipfsHash)`: Allows any landowner to register a parcel with an unverified (`isVerified = false`) and unlisted (`isForSale = false`) state.
-- `verifyLand(landId)`: Restricted by the `onlyAdmin` modifier. The Government Land Inspector audits cadastral boundary maps on IPFS and certifies the title.
+- `registerLand(physicalAddress, areaSqFt, priceInWei, ipfsHash)`: Allows any citizen to register a parcel with an unverified (`isVerified = false`) and unlisted (`isForSale = false`) state.
+- `verifyLand(landId)`: Restricted by the `onlyInspector` modifier. The Field Inspector audits cadastral boundary maps on IPFS and certifies deed authenticity.
+- `certifyTitle(landId)`: Restricted by the `onlyRegistrar` modifier. The Government Registrar executes formal legal title certification on-chain.
 - `listForSale(landId, newPrice)`: Restricted by `onlyOwner`. Land must be verified before listing on the public marketplace.
 - `delistLand(landId)`: Allows the current owner to remove an active listing from the marketplace.
-- `buyLand(landId)`: Payable function with `nonReentrant` modifier. Validates payment, reassigns ownership, resets listing state, transfers funds to the seller, and refunds any excess payment atomically.
+- `buyLand(landId)`: Payable function with `nonReentrant` modifier. Validates payment, reassigns ownership, executes O(1) swap-and-pop array updates, transfers funds to the seller, and refunds any excess payment atomically.
+- `addInspector(address)` & `addRegistrar(address)`: Administrative officer management functions restricted by `onlyAdmin`.
 - `getLandDetails(landId)` & `getLandsByOwner(ownerAddress)`: Public view functions enabling real-time dashboard data queries.
 
 ### Gas-Optimized Custom Errors:
-Rather than storing verbose string revert messages in contract bytecode, 11 custom errors reduce contract deployment and execution gas:
-`NotAdmin()`, `NotOwner()`, `LandNotFound()`, `LandAlreadyVerified()`, `LandNotVerified()`, `LandNotForSale()`, `InsufficientPayment()`, `CannotBuyOwnLand()`, `InvalidArea()`, `InvalidPrice()`, `EmptyAddress()`, `EmptyIpfsHash()`, `EtherTransferFailed()`.
+Rather than storing verbose string revert messages in contract bytecode, 16 custom errors reduce contract deployment and execution gas:
+`NotAdmin()`, `NotInspector()`, `NotRegistrar()`, `InvalidOfficerAddress()`, `NotOwner()`, `LandNotFound()`, `LandAlreadyVerified()`, `LandNotVerified()`, `LandNotForSale()`, `InsufficientPayment()`, `CannotBuyOwnLand()`, `InvalidArea()`, `InvalidPrice()`, `EmptyAddress()`, `EmptyIpfsHash()`, `EtherTransferFailed()`.
 
 ---
 
@@ -233,28 +259,23 @@ Rather than storing verbose string revert messages in contract bytecode, 11 cust
 
 The completed system executes all real-world land administration workflows with instantaneous visual feedback and on-chain verification:
 
-1. **MetaMask Wallet Connection & Multi-Persona Detection**:
-   - The user connects their MetaMask wallet to the local Hardhat network (`http://127.0.0.1:8545`, Chain ID: `31337`).
-   - The application automatically switches UI modes based on the active wallet address:
-     - **Admin / Inspector**: `0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266`
-     - **Seller / Current Owner**: `0x70997970C51812dc3A010C7d01b50e0d17dc79C8`
-     - **Buyer**: `0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC`
+1. **Unified Role Gateway & MetaMask Wallet Authentication**:
+   - The user accesses `RoleLoginPage` to authenticate as an Admin, Field Inspector, Land Registrar, or Citizen.
+   - Issues a cryptographic nonce challenge via the Express backend, verified against the user's MetaMask signer.
 2. **Land Parcel Registration with IPFS Pinning**:
-   - In the **Register Property** tab, the user enters property details (e.g., Street Address, Area in Sq Ft, Price in ETH) and drops a deed PDF into the uploader.
-   - The document is pinned to Pinata IPFS, returning a cryptographic CID (`Qm...`).
-   - The user signs the `registerLand()` transaction via MetaMask, emitting the `LandRegistered` event.
-3. **Government Inspector Title Audit & Verification**:
-   - Switching to the Admin account reveals the **Inspector Panel**.
-   - The Inspector opens the attached deed on the IPFS gateway, confirms authenticity, and clicks **"Verify Title"**.
-   - The transaction confirms on-chain, and the parcel badge updates to a green **"Verified"** state.
+   - In the **Citizen Portal**, the user registers property details and uploads a deed PDF.
+   - The document is pinned to Pinata IPFS (CID: `Qm...`), and the on-chain `registerLand()` transaction is executed.
+3. **Two-Tier Government Verification Pipeline**:
+   - **Tier 1 (Field Inspector)**: Opens pending parcel records, verifies deed blueprints via IPFS gateway, and executes `verifyLand(id)`.
+   - **Tier 2 (Government Registrar)**: Performs final legal title audit and executes `certifyTitle(id)`, updating parcel status to Verified & Certified (Green).
 4. **Marketplace Listing & Asking Price Configuration**:
-   - In the **My Assets** tab, the property owner sets an asking price (e.g., 2.5 ETH) and clicks **"List for Sale"**.
-   - The property immediately populates the public **Marketplace** tab with price and parcel specifications.
+   - In **My Lands**, the property owner sets an asking price and lists the verified property.
+   - The listing immediately populates the public Marketplace with parcel specifications.
 5. **Atomic Escrow Purchase & Instant Title Transfer**:
-   - The Buyer selects **"Buy Now"** from the Marketplace tab and confirms the transaction in MetaMask with 2.5 ETH.
-   - The smart contract atomically transfers 2.5 ETH to the seller's wallet, reassigns `currentOwner` to the buyer, removes the listing from the marketplace, and refunds any excess payment immediately.
+   - The Buyer selects **"Buy Now"** and confirms payment in MetaMask with ETH.
+   - The smart contract atomically transfers funds to the seller, reassigns ownership with O(1) array swap-and-pop, removes the marketplace listing, and refunds any excess payment immediately.
 6. **Automated Verification Matrix**:
-   - All 21 Hardhat unit test cases pass in under 1 second, confirming zero regressions across deployment, access control, edge-case rejection, and reentrancy protection.
+   - All 21 Hardhat unit test cases pass in 798ms, alongside backend JWT/RBAC integration test suites confirming zero security regressions.
 
 ---
 

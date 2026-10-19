@@ -170,13 +170,15 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
         <div className="flex items-center space-x-3">
           <button
             onClick={toggleTheme}
-            className={`p-2 rounded-lg border transition-colors ${
+            aria-label={isDarkMode ? "Switch to light theme" : "Switch to dark theme"}
+            className={`p-2 rounded-lg border transition-colors tc-focus-ring ${
               isDarkMode
                 ? "bg-slate-800 border-slate-700 text-amber-400 hover:bg-slate-700"
                 : "bg-slate-100 border-slate-200 text-slate-600 hover:bg-slate-200"
             }`}
+            title={isDarkMode ? "Switch to light theme" : "Switch to dark theme"}
           >
-            {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            {isDarkMode ? <Sun className="h-4 w-4" aria-hidden="true" /> : <Moon className="h-4 w-4" aria-hidden="true" />}
           </button>
         </div>
       </header>
@@ -195,15 +197,15 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
               <div
                 className={`h-12 w-12 rounded-xl flex items-center justify-center font-bold shadow-md ${
                   meta.color === "emerald"
-                    ? "bg-emerald-500/15 text-emerald-500 shadow-emerald-500/10"
+                    ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 shadow-emerald-500/10"
                     : meta.color === "amber"
-                    ? "bg-amber-500/15 text-amber-500 shadow-amber-500/10"
+                    ? "bg-amber-500/15 text-amber-800 dark:text-amber-400 shadow-amber-500/10"
                     : meta.color === "purple"
-                    ? "bg-purple-500/15 text-purple-500 shadow-purple-500/10"
-                    : "bg-blue-500/15 text-blue-500 shadow-blue-500/10"
+                    ? "bg-purple-500/15 text-purple-700 dark:text-purple-400 shadow-purple-500/10"
+                    : "bg-blue-500/15 text-blue-700 dark:text-blue-400 shadow-blue-500/10"
                 }`}
               >
-                <Icon className="h-6 w-6" />
+                <Icon className="h-6 w-6" aria-hidden="true" />
               </div>
               <div>
                 <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">{meta.title}</h2>
@@ -213,14 +215,18 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
 
             {/* Citizen Tab Switcher (SignIn / Register) */}
             {role === "citizen" && (
-              <div className="grid grid-cols-2 p-1 rounded-xl bg-slate-100 dark:bg-slate-800 mb-6 text-xs font-bold">
+              <div role="tablist" aria-label="Authentication modes" className="grid grid-cols-2 p-1 rounded-xl bg-slate-100 dark:bg-slate-800 mb-6 text-xs font-bold">
                 <button
                   type="button"
+                  role="tab"
+                  id="tab-signin"
+                  aria-selected={activeTab === "signin"}
+                  aria-controls="signin-panel"
                   onClick={() => {
                     setActiveTab("signin");
                     setError("");
                   }}
-                  className={`py-2 rounded-lg transition-all ${
+                  className={`py-2 rounded-lg transition-all tc-focus-ring ${
                     activeTab === "signin"
                       ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-xs"
                       : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
@@ -230,11 +236,15 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
                 </button>
                 <button
                   type="button"
+                  role="tab"
+                  id="tab-register"
+                  aria-selected={activeTab === "register"}
+                  aria-controls="register-panel"
                   onClick={() => {
                     setActiveTab("register");
                     setError("");
                   }}
-                  className={`py-2 rounded-lg transition-all ${
+                  className={`py-2 rounded-lg transition-all tc-focus-ring ${
                     activeTab === "register"
                       ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-xs"
                       : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
@@ -247,36 +257,59 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
 
             {/* Error & Success Banners */}
             {error && (
-              <div className="mb-5 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs">
+              <div
+                id="login-error-alert"
+                role="alert"
+                aria-live="assertive"
+                className="mb-5 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs"
+              >
                 <div className="flex items-start space-x-2">
-                  <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
+                  <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" aria-hidden="true" />
                   <span className="leading-relaxed">{error}</span>
                 </div>
               </div>
             )}
             {successMsg && (
-              <div className="mb-5 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs flex items-start space-x-2">
-                <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5" />
+              <div
+                id="login-success-alert"
+                role="status"
+                aria-live="polite"
+                className="mb-5 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs flex items-start space-x-2"
+              >
+                <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5" aria-hidden="true" />
                 <span className="leading-relaxed">{successMsg}</span>
               </div>
             )}
 
             {/* SIGN IN FORM */}
             {activeTab === "signin" ? (
-              <form onSubmit={handleSubmitLogin} className="space-y-4">
+              <form
+                id="signin-panel"
+                role={role === "citizen" ? "tabpanel" : undefined}
+                aria-labelledby={role === "citizen" ? "tab-signin" : undefined}
+                onSubmit={handleSubmitLogin}
+                className="space-y-4"
+              >
                 {/* Username / Email */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                  <label
+                    htmlFor="login-username"
+                    className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5"
+                  >
                     Username or Official Email
                   </label>
                   <div className="relative">
-                    <Mail className="h-4 w-4 absolute left-3 top-3 text-slate-400" />
+                    <Mail className="h-4 w-4 absolute left-3 top-3 text-slate-400" aria-hidden="true" />
                     <input
+                      id="login-username"
                       type="text"
                       value={emailOrUsername}
                       onChange={(e) => setEmailOrUsername(e.target.value)}
                       placeholder="e.g. officer@terrachain.gov.in"
-                      className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                      aria-required="true"
+                      aria-invalid={error ? "true" : undefined}
+                      aria-describedby={error ? "login-error-alert" : undefined}
+                      className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-emerald-500 outline-none transition-all tc-focus-ring"
                       required
                     />
                   </div>
@@ -284,25 +317,33 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
 
                 {/* Password with Show/Hide */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                  <label
+                    htmlFor="login-password"
+                    className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5"
+                  >
                     Password
                   </label>
                   <div className="relative">
-                    <Lock className="h-4 w-4 absolute left-3 top-3 text-slate-400" />
+                    <Lock className="h-4 w-4 absolute left-3 top-3 text-slate-400" aria-hidden="true" />
                     <input
+                      id="login-password"
                       type={showPassword ? "text" : "password"}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="Enter your secure password"
-                      className="w-full pl-9 pr-10 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                      aria-required="true"
+                      aria-invalid={error ? "true" : undefined}
+                      aria-describedby={error ? "login-error-alert" : undefined}
+                      className="w-full pl-9 pr-10 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-emerald-500 outline-none transition-all tc-focus-ring"
                       required
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                      aria-label={showPassword ? "Hide password" : "Show password"}
+                      className="absolute right-3 top-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 tc-focus-ring rounded-md p-0.5"
                     >
-                      {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      {showPassword ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
                     </button>
                   </div>
                 </div>
@@ -311,7 +352,9 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full py-2.5 px-4 rounded-xl font-bold text-xs transition-all flex items-center justify-center space-x-2 shadow-md ${
+                  aria-disabled={loading}
+                  aria-busy={loading}
+                  className={`w-full py-2.5 px-4 rounded-xl font-bold text-xs transition-all flex items-center justify-center space-x-2 shadow-md tc-focus-ring ${
                     meta.color === "emerald"
                       ? "bg-emerald-600 hover:bg-emerald-500 text-white"
                       : meta.color === "amber"
@@ -323,97 +366,124 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
                 >
                   {loading ? (
                     <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      <span>Authenticating Identity...</span>
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                      <span role="status">Authenticating Identity...</span>
                     </>
                   ) : (
                     <>
                       <span>Sign In to {role.toUpperCase()} Portal</span>
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </>
                   )}
                 </button>
               </form>
             ) : (
               /* CITIZEN REGISTRATION FORM */
-              <form onSubmit={handleSubmitRegister} className="space-y-3.5">
+              <form
+                id="register-panel"
+                role="tabpanel"
+                aria-labelledby="tab-register"
+                onSubmit={handleSubmitRegister}
+                className="space-y-3.5"
+              >
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  <label
+                    htmlFor="reg-fullname"
+                    className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1"
+                  >
                     Full Legal Name
                   </label>
                   <input
+                    id="reg-fullname"
                     type="text"
                     value={regData.name}
                     onChange={(e) => setRegData({ ...regData, name: e.target.value })}
                     placeholder="e.g. Ramesh Kulkarni"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500 tc-focus-ring"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  <label
+                    htmlFor="reg-username"
+                    className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1"
+                  >
                     Username
                   </label>
                   <input
+                    id="reg-username"
                     type="text"
                     value={regData.username}
                     onChange={(e) => setRegData({ ...regData, username: e.target.value })}
                     placeholder="ramesh_landholder"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500 tc-focus-ring"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  <label
+                    htmlFor="reg-email"
+                    className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1"
+                  >
                     Email Address
                   </label>
                   <input
+                    id="reg-email"
                     type="email"
                     value={regData.email}
                     onChange={(e) => setRegData({ ...regData, email: e.target.value })}
                     placeholder="ramesh@example.com"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500 tc-focus-ring"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  <label
+                    htmlFor="reg-password"
+                    className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1"
+                  >
                     Password (Min 8 Characters)
                   </label>
                   <input
+                    id="reg-password"
                     type="password"
                     value={regData.password}
                     onChange={(e) => setRegData({ ...regData, password: e.target.value })}
                     placeholder="••••••••"
-                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500 tc-focus-ring"
                     required
                   />
                 </div>
 
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <label
+                      htmlFor="reg-wallet"
+                      className="text-xs font-semibold text-slate-700 dark:text-slate-300"
+                    >
                       Ethereum Wallet Address
                     </label>
                     {connectedAccount && (
                       <button
                         type="button"
                         onClick={() => setRegData({ ...regData, walletAddress: connectedAccount })}
-                        className="text-[10px] text-blue-500 font-bold hover:underline"
+                        aria-label={`Use connected wallet address ${connectedAccount.slice(0, 6)}...`}
+                        className="text-[10px] text-blue-500 font-bold hover:underline tc-focus-ring rounded-sm"
                       >
                         Use Connected ({connectedAccount.slice(0, 6)}...)
                       </button>
                     )}
                   </div>
                   <input
+                    id="reg-wallet"
                     type="text"
                     value={regData.walletAddress}
                     onChange={(e) => setRegData({ ...regData, walletAddress: e.target.value })}
                     placeholder="0x..."
-                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-mono text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-mono text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500 tc-focus-ring"
                     required
                   />
                 </div>
@@ -421,9 +491,18 @@ export default function RoleLoginPage({ role, isDarkMode, toggleTheme }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-md disabled:opacity-50 mt-2"
+                  aria-disabled={loading}
+                  aria-busy={loading}
+                  className="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-md disabled:opacity-50 mt-2 tc-focus-ring"
                 >
-                  {loading ? "Registering..." : "Complete Citizen Registration"}
+                  {loading ? (
+                    <span role="status" className="flex items-center justify-center space-x-2">
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                      <span>Registering Account...</span>
+                    </span>
+                  ) : (
+                    "Complete Citizen Registration"
+                  )}
                 </button>
               </form>
             )}

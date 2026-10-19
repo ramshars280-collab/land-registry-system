@@ -6,8 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TerraChain | Property Title & Asset Protocol</title>
     <meta name="description" content="Enterprise Web3 Property Title Protocol and Real Estate Asset Exchange." />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('terra_theme') || localStorage.getItem('terrachain_theme');
+          if (saved === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else if (saved === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            // Respect application default (light mode)
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <body class="bg-slate-100 text-slate-900 min-h-screen antialiased">
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen antialiased transition-colors duration-150">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

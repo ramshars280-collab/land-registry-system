@@ -12,6 +12,7 @@ import {
   Sun,
   Moon,
 } from "lucide-react";
+import StatusBadge from "../components/common/StatusBadge";
 
 export default function LandingPage({ isDarkMode, toggleTheme }) {
   const portals = [
@@ -64,11 +65,11 @@ export default function LandingPage({ isDarkMode, toggleTheme }) {
       path: "/citizen/login",
       color: "blue",
       icon: Users,
-      description: "Citizen portal for landowners to register parcels and buyers to acquire verified real estate with ETH.",
+      description: "Citizen portal for landowners to register parcels and buyers to acquire verified real estate in Rupees (INR) with smart contract settlement.",
       highlights: [
         "Self-Service Citizen Account Registration",
         "Property Deed Upload to IPFS",
-        "Atomic Land Purchase with Escrow Settlement",
+        "Atomic Land Purchase in Rupees (INR) via Smart Contract",
       ],
     },
   ];
@@ -107,14 +108,15 @@ export default function LandingPage({ isDarkMode, toggleTheme }) {
           <div className="flex items-center space-x-3">
             <button
               onClick={toggleTheme}
-              className={`p-2 rounded-lg border transition-colors ${
+              aria-label={isDarkMode ? "Switch to light theme" : "Switch to dark theme"}
+              className={`p-2 rounded-lg border transition-colors tc-focus-ring ${
                 isDarkMode
                   ? "bg-slate-800 border-slate-700 text-amber-400 hover:bg-slate-700"
                   : "bg-slate-100 border-slate-200 text-slate-600 hover:bg-slate-200"
               }`}
-              title="Toggle theme"
+              title={isDarkMode ? "Switch to light theme" : "Switch to dark theme"}
             >
-              {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              {isDarkMode ? <Sun className="h-4 w-4" aria-hidden="true" /> : <Moon className="h-4 w-4" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -154,21 +156,17 @@ export default function LandingPage({ isDarkMode, toggleTheme }) {
                     <div
                       className={`h-12 w-12 rounded-xl flex items-center justify-center font-bold ${
                         p.color === "emerald"
-                          ? "bg-emerald-500/15 text-emerald-500"
+                          ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
                           : p.color === "amber"
-                          ? "bg-amber-500/15 text-amber-500"
+                          ? "bg-amber-500/15 text-amber-800 dark:text-amber-400"
                           : p.color === "purple"
-                          ? "bg-purple-500/15 text-purple-500"
-                          : "bg-blue-500/15 text-blue-500"
+                          ? "bg-purple-500/15 text-purple-700 dark:text-purple-400"
+                          : "bg-blue-500/15 text-blue-700 dark:text-blue-400"
                       }`}
                     >
                       <Icon className="h-6 w-6" />
                     </div>
-                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
-                      isDarkMode ? "bg-slate-800 text-slate-300" : "bg-slate-100 text-slate-600"
-                    }`}>
-                      {p.role}
-                    </span>
+                    <StatusBadge status={p.role} size="xs" showDot={false} />
                   </div>
 
                   <h3 className="text-lg font-bold mb-1 text-slate-900 dark:text-white">{p.title}</h3>

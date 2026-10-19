@@ -76,7 +76,7 @@ describe("LandRegistry Role-Based Access Control (Admin, Inspector, Registrar, C
 
       await expect(
         landRegistry.connect(inspector).verifyLand(1)
-      ).to.be.revertedWithCustomError(landRegistry, "NotAdmin");
+      ).to.be.revertedWithCustomError(landRegistry, "NotInspector");
     });
   });
 

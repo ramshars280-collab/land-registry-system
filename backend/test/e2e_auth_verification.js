@@ -62,7 +62,7 @@ async function verifyAllAuthCases() {
   const registrarToken = await testLoginFlow(
     "registrar",
     { emailOrUsername: "registrar@terrachain.gov.in", password: "registrar123" },
-    "Sub-Registrar Meera Deshmukh",
+    "Sub-Registrar Meera",
     "registrar"
   );
 
